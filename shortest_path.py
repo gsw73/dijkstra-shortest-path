@@ -25,6 +25,7 @@ def clock( func ):
         return result
     return wrapper
 
+@clock
 def readFromFile( n, inputFile ):
     vArr = [ None for i in range( n + 1 ) ]
 
@@ -224,6 +225,7 @@ class Vertex:
                 self.path )
         return( s )
 
+@clock
 def dijkstra( verticies, my_heap, source ):
     MIN_LOC = 0
     set_x = set()
